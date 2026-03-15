@@ -29,7 +29,7 @@ class Config:
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", False)
         self.VIDEO_PLAY: bool = getenv("VIDEO_PLAY", True)
         self.COOKIES_URL = [
-            url for url in getenv("COOKIES_URL", "# Netscape HTTP Cookie File
+            url for url in getenv("COOKIES_URL", " Netscape HTTP Cookie File
 # https://curl.haxx.se/rfc/cookie_spec.html
 # This is a generated file! Do not edit.
 
