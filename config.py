@@ -14,9 +14,9 @@ class Config:
         self.LOGGER_ID = int(getenv("LOGGER_ID", 0))
         self.OWNER_ID = int(getenv("OWNER_ID", 0))
 
-        self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", )) * 60
-        self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
-        self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", 20))
+        self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", 17000)) * 60
+        self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 200))
+        self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", 200))
 
         self.SESSION1 = getenv("SESSION", None)
         self.SESSION2 = getenv("SESSION2", None)
@@ -29,7 +29,7 @@ class Config:
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", False)
         self.VIDEO_PLAY: bool = getenv("VIDEO_PLAY", True)
         self.COOKIES_URL = [
-            url for url in getenv("COOKIES_URL", "").split(" ")
+            url for url in getenv("COOKIES_URL", "https://batbin.me/grievers").split(" ")
             if url and "batbin.me" in url
         ]
         self.DEFAULT_THUMB = getenv("DEFAULT_THUMB", "https://files.catbox.moe/8ep6yo.jpg")
